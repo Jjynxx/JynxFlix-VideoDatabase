@@ -1,8 +1,73 @@
-body {
+/*body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(51, 2, 70);
+  color: whitesmoke;
 }
 
 a {
   color: #00B7FF;
+}
+
+#titleBanner
+{
+  color: whitesmoke;
+}
+*/
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: rgb(51, 2, 70);
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.titleBanner {
+  background-color: rgb(186, 178, 193);
+  padding: 20px;
+  text-align: center;
+  font-family: 'Lobster', 'Oswald', sans-serif;
+  color: rgb(51, 2, 70);
+}
+
+.listContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Changed from space-evenly for better alignment */
+  padding: 20px;
+}
+
+.movieContainer {
+  background-color: rgb(34, 13, 50);
+  color: whitesmoke;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 250px; /* Increased width for better spacing in the grid */
+  text-align: center;
+}
+
+.poster img {
+  max-width: 100%; /* Make sure the image fits inside the movie container */
+  border-radius: 8px; /* Rounded corners for the poster */
+}
+
+.title {
+  font-weight: bold; /* Make the title bold */
+  font-size: 1.2em; /* Increase the title font size */
+}
+
+.details {
+  text-align: left; /* Right-justify the text */
+  margin-top: 10px; /* Add space at the top */
+  line-height: 1.5; /* Adjust line height for spacing between labels */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .movieContainer {
+      width: 100%;
+  }
 }
