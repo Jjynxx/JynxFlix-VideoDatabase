@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<!--Sara McHattie-->
 <head>
   <title>
     <%= title %>
@@ -9,13 +9,81 @@
 </head>
 
 <body>
-  <h1>
-    <%= title %>
-  </h1>
-  <p>Written by: <em>
+  <!--Heading section including title bar and credentials-->
+  <div class="titleBanner">
+    <h1>JynxFlix</h1>
+  </div>
+  <div class="credentials">
+    <h1>
+      <%= title %>
+    </h1>
+    <p>Written by: <em>
+        <%= author %>
+      </em>
+    </p>
+  </div>
+
+  <!--options for filtering movies, link to all, link to top rated on imdb, 
+    text search bar, dropdown for genre, and check boxes for country-->
+  <div class="menu">
+    <div class="menuOption">
+      <a href="/db/movies">Movies</a>
+    </div>
+    <div class="menuOption">
+      <a href="/db/movies?sortBy=imdb.rating&sortOrder=-1">Top Rated Movies</a>
+    </div>
+  </div>
+
+  <div class="menuOption">
+    <form action="/db/movies" method="GET" class="search-form">
+      <div class="menuOption">
+        <label for="title">Movie Title:</label>
+        <input type="text" id="title" name="title">
+      </div>
+      <div class="menuOption">
+        <label for="genre">Genre:</label>
+        <select id="genre" name="genres">
+          <option value="" disabled selected hidden>Select Genre</option>
+          <option value="Action">Action</option>
+          <option value="Animation">Animation</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Drama">Drama</option>
+          <option value="Family">Family</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Film-Noir">Film-Noir</option>
+          <option value="Horror">Horror</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Romance">Romance</option>
+          <option value="Short">Short</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Western">Western</option>
+        </select>
+      </div>
+      <div class="menuOption">
+        <label for="country">Country:</label>
+        <input type="checkbox" id="usa" name="countries" value="USA">
+        <label for="usa">USA</label>
+        <input type="checkbox" id="canada" name="countries" value="Canada">
+        <label for="canada">Canada</label>
+        <input type="checkbox" id="uk" name="countries" value="UK">
+        <label for="uk">UK</label>
+      </div>
+
+      <div class="menuOption">
+        <button type="submit">Search</button>
+      </div>
+    </form>
+  </div>
+
+  <!--footer with contact information-->
+  <footer>
+    <p>Contact:  <em>
       <%= author %>
+       by 
     </em>
-  </p>
+    <a href="mailto:smchattie01@student.sl.on.ca">Email</a>
+    </p>
+  </footer>
 </body>
 
 </html>

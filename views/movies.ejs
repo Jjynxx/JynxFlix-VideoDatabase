@@ -1,15 +1,24 @@
 <!DOCTYPE html>
+<!--Sara McHattie-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movies</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
 
     <div class = "titleBanner"><h1>JynxFlix</h1></div>
 
+    <!--Menu to navigate page-->
+    <div class="menuContainer">
+        <div class="menuOption">
+            <a href="/">Home</a>
+        </div>
+    </div>
+
+    <!--Movie list-->
     <div class = "listContainer">
         <% movies.forEach((movie)=>{ %>
             <div class = "movieContainer">
@@ -24,6 +33,8 @@
                     <%= movie.cast%></label><br>
                     <label>Year:
                     <%= movie.year%></label><br>
+                    <label>Genres:
+                        <%= movie.genres%></label><br>
                     <label>Runtime:
                     <%= movie.runtime%></label><br>
                     <label>Plot:
